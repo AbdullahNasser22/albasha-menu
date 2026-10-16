@@ -1,1 +1,124 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عصائر الباشا | المنيو</title>
+<style>
+body{margin:0;background:#faf7ef;color:#292e24;font-family:Tahoma,Arial,sans-serif}
+header{background:#35432d;color:#eee4ce;text-align:center;padding:35px 15px;border-bottom:5px solid #c8b990}
+.logo{width:70px;height:70px;border:2px solid #eee4ce;border-radius:50%;display:grid;place-items:center;margin:auto;font-size:34px}
+h1{font-size:30px;margin:12px 0 5px}
+header p{margin:0;color:#e1d5bb}
+.intro{text-align:center;padding:22px 10px 10px}
+.intro h2{color:#35432d}
+#search{display:block;width:85%;padding:13px;margin:10px auto 20px;border:1px solid #ddd3bd;border-radius:12px;font-size:16px}
+nav{display:flex;gap:8px;overflow:auto;padding:10px}
+nav a{flex-shrink:0;background:#eee4ce;color:#35432d;text-decoration:none;padding:11px 14px;border-radius:25px;font-size:13px}
+main{max-width:750px;margin:auto;padding:10px 15px 30px}
+.category{margin-bottom:28px;scroll-margin-top:15px}
+.category h2{color:#35432d;border-right:4px solid #b8a477;padding-right:10px;font-size:20px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.item{background:white;border:1px solid #eee8db;border-radius:12px;padding:16px 10px;display:flex;justify-content:space-between;align-items:center;gap:5px}
+.item h3{font-size:14px;margin:0}
+.price{color:#536344;font-size:11px;white-space:nowrap}
+footer{background:#35432d;color:#eee4ce;text-align:center;padding:25px}
+@media(max-width:360px){.items{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">♛</div>
+<h1>عصائر الباشا</h1>
+<p>عصير على أصوله</p>
+</header>
+<div class="intro">
+<h2>منيو الباشا</h2>
+<p>اختار مشروبك المفضل</p>
+</div>
+<input id="search" placeholder="ابحث عن مشروبك..." oninput="filterMenu()">
+<nav>
+<a href="#fresh">عصائر فريش</a>
+<a href="#soda">الصودا</a>
+<a href="#mix">ميكسات الباشا</a>
+<a href="#cocktail">كوكتيلات الباشا</a>
+<a href="#smoothie">سموزي</a>
+<a href="#shake">ميلك شيك</a>
+</nav>
+<main>
+<section class="category" id="fresh">
+<h2>🍹 عصائر فريش</h2><div class="items">
+<div class="item"><h3>قصب</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>تمر هندي</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>سوبيا</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>برتقال</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>موز باللبن</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+<section class="category" id="soda">
+<h2>🥤 الصودا</h2><div class="items">
+<div class="item"><h3>ليمون نعناع</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>كولا</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>ريد بول</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+<section class="category" id="mix">
+<h2>👑 ميكسات الباشا</h2><div class="items">
+<div class="item"><h3>قصب سوبيا</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>قصب مانجو</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>قصب باللبن</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>قصب ليمون</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>سوبيا مانجو</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>مانجو باللبن</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>مانجو كيوي</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>مانجو خوخ</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+<section class="category" id="cocktail">
+<h2>💥 كوكتيلات الباشا</h2><div class="items">
+<div class="item"><h3>كوكتيل</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>قنبلة الباشا</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>رز بلبن</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+<section class="category" id="smoothie">
+<h2>🍓 سموزي</h2><div class="items">
+<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>دراجون فروت</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+<section class="category" id="shake">
+<h2>🥛 ميلك شيك</h2><div class="items">
+<div class="item"><h3>أوريو</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>لوتس</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+</div></section>
+</main>
+<footer><strong>عصائر الباشا 👑</strong><br>عصير على أصوله<br>الجمالية — الدقهلية</footer>
+<script>
+function filterMenu(){
+const q=document.getElementById('search').value.trim().toLowerCase();
+document.querySelectorAll('.category').forEach(section=>{
+let count=0;
+section.querySelectorAll('.item').forEach(item=>{
+const match=item.innerText.toLowerCase().includes(q);
+item.style.display=match?'flex':'none';
+if(match)count++;
+});
+section.style.display=count?'block':'none';
+});
+}
+</script>
+</body>
+</html>
