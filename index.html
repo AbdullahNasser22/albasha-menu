@@ -3,16 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#35432d">
+<meta name="description" content="منيو عصائر الباشا في الجمالية — الدقهلية. عصير على أصوله.">
+<link rel="icon" href="logo.png" type="image/png">
 <title>عصائر الباشا | المنيو</title>
 <style>
 body{margin:0;background:#faf7ef;color:#292e24;font-family:Tahoma,Arial,sans-serif}
-header{background:#35432d;color:#eee4ce;text-align:center;padding:35px 15px;border-bottom:5px solid #c8b990}
-.logo{width:70px;height:70px;border:2px solid #eee4ce;border-radius:50%;display:grid;place-items:center;margin:auto;font-size:34px}
-h1{font-size:30px;margin:12px 0 5px}
-header p{margin:0;color:#e1d5bb}
+/* المرحلة الأولى: هوية الباشا في الهيدر */
+header{
+  background:linear-gradient(150deg,#2b3829 0%,#35432d 62%,#46583a 100%);
+  color:#f8f2df;
+  text-align:center;
+  padding:36px 16px 32px;
+  border-bottom:3px solid #d7bf64;
+}
+.header-inner{max-width:750px;margin:0 auto}
+.logo{
+  width:122px;
+  height:122px;
+  padding:6px;
+  border-radius:50%;
+  margin:0 auto;
+  border:1px solid rgba(248,242,223,.55);
+  background:rgba(248,242,223,.08);
+  box-shadow:0 8px 24px rgba(0,0,0,.13);
+}
+.logo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+header h1{font-size:30px;line-height:1.5;margin:16px 0 2px;letter-spacing:.2px}
+header p{margin:0;color:#eee4ce;font-size:15px;line-height:1.7}
 .intro{text-align:center;padding:22px 10px 10px}
 .intro h2{color:#35432d}
-#search{display:block;width:85%;padding:13px;margin:10px auto 20px;border:1px solid #ddd3bd;border-radius:12px;font-size:16px}
+#search{display:block;width:85%;max-width:750px;box-sizing:border-box;padding:13px;margin:10px auto 20px;border:1px solid #ddd3bd;border-radius:12px;font-size:16px}
 nav{display:flex;gap:8px;overflow:auto;padding:10px}
 nav a{flex-shrink:0;background:#eee4ce;color:#35432d;text-decoration:none;padding:11px 14px;border-radius:25px;font-size:13px}
 main{max-width:750px;margin:auto;padding:10px 15px 30px}
@@ -23,101 +44,109 @@ main{max-width:750px;margin:auto;padding:10px 15px 30px}
 .item h3{font-size:14px;margin:0}
 .price{color:#536344;font-size:11px;white-space:nowrap}
 footer{background:#35432d;color:#eee4ce;text-align:center;padding:25px}
-@media(max-width:360px){.items{grid-template-columns:1fr}}
+@media(max-width:360px){.items{grid-template-columns:1fr}.logo{width:108px;height:108px}header h1{font-size:27px}}
 </style>
 </head>
 <body>
 <header>
-<div class="logo">♛</div>
-<h1>عصائر الباشا</h1>
-<p>عصير على أصوله</p>
+  <div class="header-inner">
+    <div class="logo"><img src="logo.png" alt="لوجو عصائر الباشا" width="122" height="122" fetchpriority="high"></div>
+    <h1>عصائر الباشا</h1>
+    <p>عصير على أصوله</p>
+  </div>
 </header>
 <div class="intro">
-<h2>منيو الباشا</h2>
-<p>اختار مشروبك المفضل</p>
+  <h2>منيو الباشا</h2>
+  <p>اختار مشروبك المفضل</p>
 </div>
-<input id="search" placeholder="ابحث عن مشروبك..." oninput="filterMenu()">
-<nav>
-<a href="#fresh">عصائر فريش</a>
-<a href="#soda">الصودا</a>
-<a href="#mix">ميكسات الباشا</a>
-<a href="#cocktail">كوكتيلات الباشا</a>
-<a href="#smoothie">سموزي</a>
-<a href="#shake">ميلك شيك</a>
+<input id="search" type="search" aria-label="البحث عن مشروب" placeholder="ابحث عن مشروبك..." oninput="filterMenu()">
+<nav aria-label="أقسام المنيو">
+  <a href="#fresh">عصائر فريش</a>
+  <a href="#soda">الصودا</a>
+  <a href="#mix">ميكسات الباشا</a>
+  <a href="#cocktail">كوكتيلات الباشا</a>
+  <a href="#smoothie">سموزي</a>
+  <a href="#shake">ميلك شيك</a>
 </nav>
 <main>
 <section class="category" id="fresh">
-<h2>🍹 عصائر فريش</h2><div class="items">
-<div class="item"><h3>قصب</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>تمر هندي</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>سوبيا</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>برتقال</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>موز باللبن</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>🍹 عصائر فريش</h2><div class="items">
+    <div class="item"><h3>قصب</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>تمر هندي</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>سوبيا</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>برتقال</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>موز باللبن</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 <section class="category" id="soda">
-<h2>🥤 الصودا</h2><div class="items">
-<div class="item"><h3>ليمون نعناع</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>كولا</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>ريد بول</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>🥤 الصودا</h2><div class="items">
+    <div class="item"><h3>ليمون نعناع</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>كولا</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>ريد بول</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 <section class="category" id="mix">
-<h2>👑 ميكسات الباشا</h2><div class="items">
-<div class="item"><h3>قصب سوبيا</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>قصب مانجو</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>قصب باللبن</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>قصب ليمون</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>سوبيا مانجو</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>مانجو باللبن</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>مانجو كيوي</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>مانجو خوخ</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>👑 ميكسات الباشا</h2><div class="items">
+    <div class="item"><h3>قصب سوبيا</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>قصب مانجو</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>قصب باللبن</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>قصب ليمون</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>سوبيا مانجو</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>مانجو باللبن</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>مانجو كيوي</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>مانجو خوخ</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 <section class="category" id="cocktail">
-<h2>💥 كوكتيلات الباشا</h2><div class="items">
-<div class="item"><h3>كوكتيل</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>قنبلة الباشا</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>رز بلبن</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>💥 كوكتيلات الباشا</h2><div class="items">
+    <div class="item"><h3>كوكتيل</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>قنبلة الباشا</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>رز بلبن</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 <section class="category" id="smoothie">
-<h2>🍓 سموزي</h2><div class="items">
-<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>دراجون فروت</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>🍓 سموزي</h2><div class="items">
+    <div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>كيوي</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>باشون فروت</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>بطيخ</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>خوخ</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>كرز</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>دراجون فروت</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 <section class="category" id="shake">
-<h2>🥛 ميلك شيك</h2><div class="items">
-<div class="item"><h3>أوريو</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>لوتس</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
-<div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
-</div></section>
+  <h2>🥛 ميلك شيك</h2><div class="items">
+    <div class="item"><h3>أوريو</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>لوتس</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>مانجو</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>فراولة</h3><span class="price">السعر يُضاف</span></div>
+    <div class="item"><h3>بلو بيري</h3><span class="price">السعر يُضاف</span></div>
+  </div>
+</section>
 </main>
 <footer><strong>عصائر الباشا 👑</strong><br>عصير على أصوله<br>الجمالية — الدقهلية</footer>
 <script>
 function filterMenu(){
-const q=document.getElementById('search').value.trim().toLowerCase();
-document.querySelectorAll('.category').forEach(section=>{
-let count=0;
-section.querySelectorAll('.item').forEach(item=>{
-const match=item.innerText.toLowerCase().includes(q);
-item.style.display=match?'flex':'none';
-if(match)count++;
-});
-section.style.display=count?'block':'none';
-});
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  document.querySelectorAll('.category').forEach(section=>{
+    let count=0;
+    section.querySelectorAll('.item').forEach(item=>{
+      const match=item.innerText.toLowerCase().includes(q);
+      item.style.display=match?'flex':'none';
+      if(match)count++;
+    });
+    section.style.display=count?'block':'none';
+  });
 }
 </script>
 </body>
